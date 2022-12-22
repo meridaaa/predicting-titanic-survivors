@@ -65,6 +65,7 @@ The MinMaxscaler is a type of scaler that scales the minimum and maximum values 
 The KNNImputer class provides imputation for completing missing values using the k-Nearest Neighbors approach. Each sample's missing values are imputed using values from n_neighbors nearest neighbors found in the training set. Note that if a sample has more than one feature missing, then the sample can potentially have multiple sets of n_neighbors donors depending on the particular feature being imputed.
 
 Each missing feature is then imputed as the average, either weighted or unweighted, of these neighbors. Where the number of donor neighbors is less than n_neighbors, the training set average for that feature is used for imputation. The total number of samples in the training set is, of course, always greater than or equal to the number of nearest neighbors available for imputation, depending on both the overall sample size as well as the number of samples excluded from nearest neighbor calculation because of too many missing features (as controlled by row_max_missing).
+
 We we will fill the missing value with KNNImputer.
 
 # Model
@@ -78,9 +79,6 @@ Random forest, like its name implies, consists of a large number of individual d
 | accuracy |  |   |                     0.83 |       418 |
 | macro avg |      0.81 |     0.81 |     0.81 |      418 |
 | weighted avg |       0.82 |     0.83 |      0.82 |      418 |
-
-KNNImputer by scikit-learn is a widely used method to impute missing values.
-
 
 ## Random Forest
 Random forest is a supervised learning algorithm. It has two variations – one is used for classification problems and other is used for regression problems. It is one of the most flexible and easy to use algorithm. It creates decision trees on the given data samples, gets prediction from each tree and selects the best solution by means of voting. It is also a pretty good indicator of feature importance.
